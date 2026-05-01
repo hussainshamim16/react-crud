@@ -1,0 +1,156 @@
+@import "tailwindcss";
+
+/* header */
+/* Header.css */
+.glass-header {
+  background: rgba(255, 255, 255, 0.8);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+.nav-link-ltr {
+  position: relative;
+}
+
+.nav-link-ltr::after {
+  content: '';
+  position: absolute;
+  width: 0%;
+  height: 2px;
+  display: block;
+  margin-top: 5px;
+  right: 0;
+  background: #3b82f6;
+  /* blue-500 */
+  transition: width 0.3s ease;
+  -webkit-transition: width 0.3s ease;
+}
+
+.nav-link-ltr:hover::after {
+  width: 100%;
+  left: 0;
+  background: #3b82f6;
+}
+
+
+/* hero */
+/* Hero.css */
+.hero-gradient {
+  background: radial-gradient(circle at 50% -20%, #3b82f622, transparent),
+    radial-gradient(circle at 0% 100%, #1e293b, #0f172a);
+}
+
+.glow-point {
+  position: absolute;
+  width: 300px;
+  height: 300px;
+  background: #3b82f6;
+  filter: blur(120px);
+  opacity: 0.15;
+  border-radius: 50%;
+  z-index: 0;
+}
+
+@keyframes float {
+  0% {
+    transform: translateY(0px);
+  }
+
+  50% {
+    transform: translateY(-20px);
+  }
+
+  100% {
+    transform: translateY(0px);
+  }
+}
+
+.animate-float {
+  animation: float 6s ease-in-out infinite;
+}
+
+/* css form */
+/* StudentForm.css */
+.form-container {
+  background: rgba(255, 255, 255, 0.03);
+  backdrop-filter: blur(15px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  animation: slideUp 0.6s ease-out;
+}
+
+.custom-input {
+  background: rgba(15, 23, 42, 0.5);
+  /* Deep slate to contrast white text */
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  transition: all 0.3s ease;
+}
+
+.custom-input:focus {
+  border-color: #3b82f6;
+  box-shadow: 0 0 15px rgba(59, 130, 246, 0.3);
+  outline: none;
+}
+
+@keyframes slideUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* card css */
+/* StudentCard.css */
+.student-card {
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.student-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4), 0 0 20px rgba(59, 130, 246, 0.2);
+  border-color: rgba(59, 130, 246, 0.5);
+}
+
+.avatar-glow {
+  background: linear-gradient(45deg, #3b82f6, #8b5cf6);
+  padding: 3px;
+}
+
+/* card css */
+/* StudentCard.css */
+.student-card {
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.student-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4), 0 0 20px rgba(59, 130, 246, 0.2);
+  border-color: rgba(59, 130, 246, 0.5);
+}
+
+.avatar-glow {
+  background: linear-gradient(45deg, #3b82f6, #8b5cf6);
+  padding: 3px;
+}
+
+
+/* popup */
+.popup-wrapper {
+  height: 100%;
+  width: 100%;
+  background: rgba(0, 0, 0, 0.904);
+  position: fixed;
+  top: 0;
+  z-index: 999;
+}
